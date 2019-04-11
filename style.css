@@ -7,9 +7,9 @@ img
 
 #closeModal
 {
-    width:80px;
+    width:60px;
     float:right;
-    padding:20px;
+    padding:50px;
 }
 
 
@@ -54,7 +54,6 @@ box-shadow: -1px 14px 67px -4px rgba(0,0,0,0.64);
 
 
 }
-
 .image-container
 {
  
@@ -64,4 +63,27 @@ box-shadow: -1px 14px 67px -4px rgba(0,0,0,0.64);
     align-items:center;
     height:95%;
     
+}
+.openModalImage.modal-image-container
+{
+  display: block;
+}
+
+
+.zoom
+{
+  animation:image-zoom 0.6s;
+}
+
+@keyframes image-zoom
+{
+  0%
+  {
+      transform: scale(0);
+  }
+
+  100%
+  {
+      transform:scale(1);
+  }
 }

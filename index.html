@@ -2,6 +2,21 @@
 
 <head>
 <link href="style.css" rel="stylesheet" type="text/css">
+
+<script>
+
+  function closeModalImage()
+  {
+    const imageContainer = document.querySelector(".modal-image-container");
+    const parentImageContainer = document.querySelector(".image-container");
+    const image = document.querySelector("img");
+
+
+    imageContainer.classList.remove("openModalImage");
+    parentImageContainer.removeChild(image);
+
+  }
+</script>
 </head>
 
 
@@ -28,45 +43,58 @@
     <script>
     
     const selectImage = document.querySelector(".main-container");
+    const closeButton = document.querySelector("#closeModal");
 
     selectImage.addEventListener("click",e=>
     {
 
         const imageContainer = document.querySelector(".modal-image-container");
+        const parentImageContainer = document.querySelector(".image-container");
 
         if(e.target.dataset.image==="image01")
         {
-          const parentImageContainer = document.querySelector(".image-container");
           
           const imagen = document.createElement("img");
-
           imagen.src = "img/02_01_slide_nature.jpg";
-
-
+          imagen.classList.add("zoom");
           parentImageContainer.appendChild(imagen);
-
-          imageContainer.style.display="block";
+          imageContainer.classList.add("openModalImage");
+          
 
         }
 
         else
         if(e.target.dataset.image==="image02")
         {
-          console.log("image02");
+          const imagen = document.createElement("img");
+          imagen.src = "img/beauty_after_the_bust_by_framedbynature-d6yk93b.jpg";
+          imagen.classList.add("zoom");
+          parentImageContainer.appendChild(imagen);
+          imageContainer.classList.add("openModalImage");
         }
         else
         if(e.target.dataset.image==="image03")
         {
-          console.log("image03");
+          const imagen = document.createElement("img");
+          imagen.src = "img/Blue Nature Background15.jpg";
+          imagen.classList.add("zoom");
+          parentImageContainer.appendChild(imagen);
+          imageContainer.classList.add("openModalImage");
         }
         else
         if(e.target.dataset.image==="image04")
         {
-          console.log("image04");
+          const imagen = document.createElement("img");
+          imagen.src = "img/Nature Pics.jpg";
+          imagen.classList.add("zoom");
+          parentImageContainer.appendChild(imagen);
+          imageContainer.classList.add("openModalImage");
         }
 
 
     });
+
+    closeButton.addEventListener("click",closeModalImage);
     
     </script>
 
