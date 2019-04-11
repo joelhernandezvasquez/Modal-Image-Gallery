@@ -1,52 +1,75 @@
 <html>
 
 <head>
-
-    <link href="style.css" rel="stylesheet" type="text/css">
-
-    <script>
-    function openModalImage()
-    {
-        const zoomImage = document.querySelector(".zoom-image");
-
-      
-        zoomImage.style.display = "block";
-    }
-
-    </script>
-
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 
 <body>
 
-    <input type="image" src="460149-snow-forest-wallpaper-2560x1440-retina.jpg" class="adjust-image">
-    
-    <div class="zoom-image">
-    
-         <input type="image" src="iconfinder_close16_216470.svg">
+    <div class="main-container">
+     
+         <input type="image" src="img/02_01_slide_nature.jpg" class="adjust-image" data-image="image01">
+         <input type="image" src="img/beauty_after_the_bust_by_framedbynature-d6yk93b.jpg" class="adjust-image" data-image="image02">
+         <input type="image" src="img/Blue Nature Background15.jpg" class="adjust-image" data-image="image03">
+         <input type="image" src="img/Nature Pics.jpg" class="adjust-image" data-image="image04">
 
-         <div class="zoom">
-         <img src="460149-snow-forest-wallpaper-2560x1440-retina.jpg">
-         </div>
+    </div>
+
+    <div class="modal-image-container">
+      <input type="image" src="img/close.svg" id="closeModal">
+
+       <div class="image-container">
+           
+       </div>
 
     </div>
 
     <script>
     
-    const buttonModaImage = document.querySelector(".adjust-image");
+    const selectImage = document.querySelector(".main-container");
 
-    buttonModaImage.addEventListener("click",openModalImage);
+    selectImage.addEventListener("click",e=>
+    {
+
+        const imageContainer = document.querySelector(".modal-image-container");
+
+        if(e.target.dataset.image==="image01")
+        {
+          const parentImageContainer = document.querySelector(".image-container");
+          
+          const imagen = document.createElement("img");
+
+          imagen.src = "img/02_01_slide_nature.jpg";
+
+
+          parentImageContainer.appendChild(imagen);
+
+          imageContainer.style.display="block";
+
+        }
+
+        else
+        if(e.target.dataset.image==="image02")
+        {
+          console.log("image02");
+        }
+        else
+        if(e.target.dataset.image==="image03")
+        {
+          console.log("image03");
+        }
+        else
+        if(e.target.dataset.image==="image04")
+        {
+          console.log("image04");
+        }
+
+
+    });
+    
     </script>
 
-      
-
-     
-
-
-
-
-
-</body> 
+</body>
 
 </html>

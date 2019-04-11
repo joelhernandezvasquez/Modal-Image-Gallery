@@ -1,63 +1,67 @@
 
-img
+img 
 {
     width:1000px;
-    height:800px;
-  
+    height:700px;
 }
 
-input[src="iconfinder_close16_216470.svg"]
+#closeModal
 {
-    width:90px;
-    float: right;
+    width:80px;
+    float:right;
     padding:20px;
-}
-
-input[class="adjust-image"]
-{
-  opacity: 1;
-  transition:opacity 0.3s ease-out;
-}
-
-input[class="adjust-image"]:hover
-{
-    opacity:0.7;
-}
-
-.zoom-image
-{
-   
-    background:silver;
-    width:100%;
-    height:100%;
-    position:fixed;
-    top:0;
-  display: none;
-
-    
 }
 
 
 .adjust-image
 {
-    width:400px;
+    width:340px;
     height:300px;
-    border-radius:20px;
-    margin-top:50px;
 }
 
-.zoom
+.main-container
 {
-    height:95%;
+    margin-top:50px;
+    display:flex;
+   flex-direction: row;
+ 
+  
+}
+.main-container > *
+{
+    padding:10px;
+}
+
+input[type="image"]
+{
+    box-shadow: 0;
+    transition:box-shadow 0.5s ease-out;
+}
+
+input[type="image"]:hover
+{
+box-shadow: -1px 14px 67px -4px rgba(0,0,0,0.64);
+}
+
+.modal-image-container
+{
+    width:100%;
+    height:100%;
+    background:black;
+    position:fixed;
+    top:0;
+    display:none;
+
+
+}
+
+.image-container
+{
+ 
     display:flex;
     flex-direction: column;
-   justify-content: center;
-   align-items: center;
-  
-   
+    justify-content: center;
+    align-items:center;
+    height:95%;
+    
 }
-
-
-
-
-
