@@ -1,3 +1,4 @@
+/* SELECTOR AND MAIN CLASSES */
 
 img 
 {
@@ -12,24 +13,10 @@ img
     padding:50px;
 }
 
-
 .adjust-image
 {
     width:340px;
     height:300px;
-}
-
-.main-container
-{
-    margin-top:50px;
-    display:flex;
-   flex-direction: row;
- 
-  
-}
-.main-container > *
-{
-    padding:10px;
 }
 
 input[type="image"]
@@ -43,6 +30,19 @@ input[type="image"]:hover
 box-shadow: -1px 14px 67px -4px rgba(0,0,0,0.64);
 }
 
+/* GALLERY STYLES  */
+
+.main-container
+{
+    margin-top:50px;
+    display:flex;
+   flex-direction: row;
+}
+.main-container > *
+{
+    padding:10px;
+}
+
 .modal-image-container
 {
     width:100%;
@@ -51,24 +51,22 @@ box-shadow: -1px 14px 67px -4px rgba(0,0,0,0.64);
     position:fixed;
     top:0;
     display:none;
-
-
 }
 .image-container
 {
- 
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    height:95%;
-    
+    height:95%; 
 }
+
+
+/* ANIMATION */
 .openModalImage.modal-image-container
 {
   display: block;
 }
-
 
 .zoom
 {
